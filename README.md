@@ -1,6 +1,6 @@
 # go-ui
 
-Package **ui** provides _user interface_ (UI) client and server implementations, for the Go programming language.
+Package **ui** provides **user interface** (UI) client and server implementations, for the Go programming language.
 
 ## Documention
 
