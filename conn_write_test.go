@@ -4,9 +4,9 @@ import (
 	"testing"
 )
 
-func TestConnWriteNilReceiver(t *testing.T) {
+func TestInternalConnWriteNilReceiver(t *testing.T) {
 
-	var conn *Conn = nil
+	var conn *internalConn = nil
 
 	var p []byte = nil
 	actualN, actualErr := conn.Write(p)
@@ -22,9 +22,9 @@ func TestConnWriteNilReceiver(t *testing.T) {
 	}
 }
 
-func TestConnWriteNilDriver(t *testing.T) {
+func TestInternalConnWriteNilDriver(t *testing.T) {
 
-	var conn *Conn = new(Conn)
+	var conn *internalConn = new(internalConn)
 
 	var p []byte = nil
 	actualN, actualErr := conn.Write(p)

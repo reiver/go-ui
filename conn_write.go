@@ -1,7 +1,7 @@
 package ui
 
 // Write makes ui.Conn fit the io.Writer interface.
-func (receiver *Conn) Write(p []byte) (int, error) {
+func (receiver *internalConn) Write(p []byte) (int, error) {
 	if nil == receiver {
 		return 0, errNilReceiver
 	}

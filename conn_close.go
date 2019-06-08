@@ -3,7 +3,7 @@ package ui
 // Close makes ui.Conn fit the io.Closer interface.
 //
 // Close closes the connection between the UI client, and the UI server.
-func (receiver *Conn) Close() error {
+func (receiver *internalConn) Close() error {
 	if nil == receiver {
 		return errNilReceiver
 	}

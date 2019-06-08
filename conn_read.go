@@ -1,7 +1,7 @@
 package ui
 
 // Read makes ui.Conn fit the io.Reader interface.
-func (receiver *Conn) Read(p []byte) (int, error) {
+func (receiver *internalConn) Read(p []byte) (int, error) {
 	if nil == receiver {
 		return 0, errNilReceiver
 	}
