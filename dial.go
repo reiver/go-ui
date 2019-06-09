@@ -20,8 +20,13 @@ func Dial(name string) (Conn, error) {
 		return nil, errNilDriver
 	}
 
+	driverConn, err := driver.Dial()
+	if nil != err {
+		return nil, err
+	}
+
 	var conn internalConn
-	conn.driver = driver
+	conn.driverConn = driverConn
 
 	return &conn, nil
 }

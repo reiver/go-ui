@@ -8,10 +8,10 @@ func (receiver *internalConn) Close() error {
 		return errNilReceiver
 	}
 
-	driver := receiver.driver
-	if nil == driver {
-		return errNilDriver
+	driverConn := receiver.driverConn
+	if nil == driverConn {
+		return errNilDriverConn
 	}
 
-	return driver.Close()
+	return driverConn.Close()
 }

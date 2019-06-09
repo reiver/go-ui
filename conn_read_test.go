@@ -22,7 +22,7 @@ func TestInternalConnReadNilReceiver(t *testing.T) {
 	}
 }
 
-func TestInternalConnReadNilDriver(t *testing.T) {
+func TestInternalConnReadNilDriverConn(t *testing.T) {
 
 	var conn *internalConn = new(internalConn)
 
@@ -34,7 +34,7 @@ func TestInternalConnReadNilDriver(t *testing.T) {
 		return
 	}
 
-	if expected, actual := errNilDriver, actualErr; expected != actual {
+	if expected, actual := errNilDriverConn, actualErr; expected != actual {
 		t.Errorf("Expected (%T) %q, but actually got (%T) %q", expected, expected, actual, actual)
 		return
 	}

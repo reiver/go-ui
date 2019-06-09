@@ -14,5 +14,5 @@ type Conn interface {
 }
 
 type internalConn struct {
-	driver ui_driver.Driver
+	driverConn ui_driver.Conn
 }

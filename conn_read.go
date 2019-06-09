@@ -6,14 +6,14 @@ func (receiver *internalConn) Read(p []byte) (int, error) {
 		return 0, errNilReceiver
 	}
 
-	driver := receiver.driver
-	if nil == driver {
-		return 0, errNilDriver
+	driverConn := receiver.driverConn
+	if nil == driverConn {
+		return 0, errNilDriverConn
 	}
 
 	if nil == p {
 		return 0, nil
 	}
 
-	return driver.Read(p)
+	return driverConn.Read(p)
 }
